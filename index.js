@@ -12,11 +12,16 @@ const commentRoutes = require("./routes/comment");
 //   credentials: true // Allow cookies/session
 // }));
 app.use(cors({
-  origin: "https://blog-fullstack-jet.vercel.app",
+  origin: [
+    "https://blog-fullstack-jet.vercel.app",
+    "https://blog-fullstack-ivans-projects-6f166288.vercel.app",
+    "https://blog-fullstack-rlna25bs2-ivans-projects-6f166288.vercel.app"
+  ],
   credentials: true,
   methods: "GET,POST,PATCH,DELETE",
   allowedHeaders: "Content-Type,Authorization",
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
