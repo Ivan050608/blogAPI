@@ -12,7 +12,7 @@ const commentRoutes = require("./routes/comment");
 //   credentials: true // Allow cookies/session
 // }));
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://blog-fullstack-jet.vercel.app",
   credentials: true,
   methods: "GET,POST,PATCH,DELETE",
   allowedHeaders: "Content-Type,Authorization",
