@@ -1,6 +1,6 @@
 const express = require("express");
 const postController = require("../controllers/post");
-const { verify, verifyAdmin } = require("../auth");
+const { verify, verifyAdmin, isLoggedIn } = require("../auth");
 const router = express.Router();
 
 // router.post("/addMovie", verify, verifyAdmin, movieController.addMovie);

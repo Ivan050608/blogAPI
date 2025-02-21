@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const secret = "inventoryManagement";
+const secret = "blogApi";
 
 
    module.exports.createAccessToken = (user) => {
@@ -52,5 +52,13 @@ const secret = "inventoryManagement";
             auth: "Failed",
             message: "Action Forbidden"
         })
+    }
+}
+
+module.exports.isLoggedIn = (req, res, next) => {
+    if (req.user) {
+        next();
+    } else {
+        res.sendStatus(401);
     }
 }

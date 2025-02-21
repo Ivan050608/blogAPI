@@ -7,10 +7,7 @@ const postRoutes = require("./routes/post");
 const userRoutes = require("./routes/user");
 const commentRoutes = require("./routes/comment");
 
-// app.use(cors({ 
-//   origin: "http://localhost:3000", // Allow frontend
-//   credentials: true // Allow cookies/session
-// }));
+
 app.use(cors({
   origin: [
     "https://blog-fullstack-jet.vercel.app",
@@ -22,6 +19,12 @@ app.use(cors({
   allowedHeaders: "Content-Type,Authorization",
 }));
 
+// app.use(cors({
+//   origin: "http://localhost:3000",
+//   credentials: true,
+//   methods: "GET,POST,PATCH,DELETE",
+//   allowedHeaders: "Content-Type,Authorization",
+// }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
